@@ -1,0 +1,13 @@
+---
+label: Normal Page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Page Title
+  description: The title is the name of the page as it will appear in search results
+    (i.e. Google) and on the page itself.
+  config:
+    required: true
+    min: 1
+  default: New Page
