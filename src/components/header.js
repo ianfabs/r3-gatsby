@@ -13,7 +13,7 @@ let HeaderContainer = styled.header`
   align-content: stretch;
   align-items: stretch;
   justify-content: space-evenly;
-  height: 6vmax;
+  min-height: 82px;
   @media (max-width: 610px) {
     height: 9vmax;
   }
