@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,300;1,500&display=swap');
+
 html {
-  font-family: sans-serif;
+  font-family: 'Roboto', Helvetica, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -185,7 +187,8 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 'Roboto', sans-serif;
+  font-size: 16px;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -236,6 +239,10 @@ h1 {
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
+}
+h1.brand {
+  font-family: 'Fabian', sans-serif;
+  font-size: 3em;
 }
 h2 {
   margin-left: 0;

@@ -1,35 +1,84 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+import { styles } from "./utils"
+import { useMediaQuery } from "react-responsive";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+let HeaderContainer = styled.header`
+  background: ${styles["white"]};
+  box-shadow: 0px 1px 8px 1px #ccc;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: space-evenly;
+  height: 6vmax;
+  @media (max-width: 610px) {
+    height: 9vmax;
+  }
+`
+
+let Brand = styled(Link).attrs(props => ({
+  to: "/",
+}))`
+  font-size: 3em;
+  font-weight: 900;
+  font-family: "Fabian", "Roboto", sans-serif;
+  text-decoration: none;
+  color: ${styles["dark-1"]};
+  line-height: 1.65em;
+  @media (max-width: 610px) {
+    content: 'R3';
+  }
+  `
+  
+  let NavContainer = styled.nav`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 2vmax;
+  // border-top: 10px solid transparent;
+  & > * {
+    padding: 21px 15px;
+    color: ${styles["dark-2"]};
+    border-top: 10px solid transparent;
+    height: 100%;
+    cursor: pointer;
+    transition: background 250ms, color 250ms, border-top 250ms;
+    &:not(.active):hover {
+      background: #eca1a1;
+      color: ${styles["dark-2"]};
+      border-top: 10px solid ${styles["red-1"]};
+    }
+  }
+  & > .active {
+    background: ${styles["red-1"]};
+    color: ${styles["white"]};
+    border-top: 10px solid #a02121;
+    text-decoration: none !important;
+  }
+`
+
+const Header = ({ siteTitle }) => {
+  let isMobile = useMediaQuery({
+    query: '(max-width: 610px)'
+  });
+  return (
+    <HeaderContainer>
+      <Brand>{isMobile ? "R3" : siteTitle}</Brand>
+      <NavContainer>
+        <Link to="/" activeClassName="active">Home</Link>
+        <Link to="/posts/" activeClassName="active">Blog</Link>
+        <Link to="/videos/" activeClassName="active">Videos</Link>
+      </NavContainer>
+    </HeaderContainer>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

@@ -1,3 +1,6 @@
 {
-  "deno.enable": false
+  "deno.enable": false,
+  "javascript.format.enable": true,
+  "typescript.format.enable": false,
+  "auto-rename-tag.activationOnLanguage": ["html", "javascript", "javascriptreact"]
 }
