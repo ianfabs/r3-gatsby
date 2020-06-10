@@ -4,7 +4,28 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  description: The <strong>Title</strong> of the post, as it will be displayed in
+    search results and on the page.
+  config:
+    required: true
+    min: 1
 - type: text
   name: author
-  label: author
+  label: Author
+  description: The <strong>Author</strong> should be the name of the person who wrote
+    the post
+  config:
+    min: 1
+- name: publishDate
+  type: datetime
+  label: Publish Date
+  description: The <strong>Publish Date</strong> will prevent any posts with this
+    field set to a date in the future from appearing in the list of available blog
+    posts.
+  config:
+    required: false
+    date_format: MMMM DD, YYYY
+    time_format: HH:MM A ZZ
+    display_utc: false
+  default: now
