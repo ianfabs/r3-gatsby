@@ -13,7 +13,7 @@ const PostsIndexPage = ({data}) => {
 
   posts = posts.filter( p => new Date(p.publishDate) <= Date.now() )
 
-  console.log(posts)
+  posts = posts.filter( p => !p.name.includes("test") );
 
   return (
     <Layout 
@@ -27,7 +27,7 @@ const PostsIndexPage = ({data}) => {
     >
 
       {
-        posts.map(p => <PostPreview {...p}/>)
+        posts.map(p => <PostPreview {...p} key={p.name}/>)
       }
     </Layout>
   )

@@ -30,7 +30,6 @@ export default class MDXLayout extends React.Component {
     this.shortcodes = {Video, SEO, Pattern};
   }
   render() {
-    console.log(this.props.pageContext)
     const {image, pattern} = this.props.pageContext.frontmatter;
     return (
       <MDXProvider components={this.shortcodes}>

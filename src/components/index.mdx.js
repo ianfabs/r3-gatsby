@@ -8,8 +8,6 @@ import { PageHeading } from "../components/utils"
 let shortcodes = { Video, SEO }
 
 export default (props) => {
-  console.log(props);
-
   return (
     <MDXProvider components={shortcodes}>
       <Layout
