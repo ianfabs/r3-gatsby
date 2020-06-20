@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
+  <defs>
+    <pattern id="pattern" width="100" height="100" viewBox="0 0 40,40" patternUnits="userSpaceOnUse" patternTransform="rotate(134)">
+      <rect id="pattern-background" width="400%" height="400%" fill="#a7a0a0"/>
+      <path filter="url(#filter1pattern)" fill="#e7edf8" d="M-4 -4 a 24 24 0 0 1 48 0 a 24 24 0 0 1 0 48 a 24 24 0 0 1 -48 0 a 24 24 0 0 1 0 -48 
+                M10 13 a 7 7 0 0 0 0 14 a 3 3 0 0 1 3 3 a 7 7 0 0 0 14 0 a 3 -3 0 0 1 3 -3 a 7 7 0 0 0 0 -14 a -3 -3 0 0 1 -3 -3 a 7 7 0 0 0 -14 0 a -3 3 0 0 1 -3 3 z"/>
+      
+      <path filter="url(#filter2pattern)" fill="#ffffff" d="M5.8 5.8 a 14.2 14.2 0 0 1 28.4 0 a 14.2 14.2 0 0 1 0 28.4 a 14.2 14.2 0 0 1 -28.4 0 a 14.2 14.2 0 0 1 0 -28.4 
+                M10 13 a 7 7 0 0 0 0 14 a 3 3 0 0 1 3 3 a 7 7 0 0 0 14 0 a 3 -3 0 0 1 3 -3 a 7 7 0 0 0 0 -14 a -3 -3 0 0 1 -3 -3 a 7 7 0 0 0 -14 0 a -3 3 0 0 1 -3 3 z"/>
+      
+    </pattern>
+    <filter id="filter1pattern">
+      <feTurbulence baseFrequency="0.01 0.2" numOctaves="2" result="result1"/>
+      <feDisplacementMap in2="result1" scale="5" result="result2" xChannelSelector="R" yChannelSelector="G" in="SourceGraphic"/>
+      <feComposite in2="result2" in="SourceGraphic" operator="atop" result="compositeGraphic"/>
+      <feOffset in="compositeGraphic" result="fbSourceGraphic" dx="-0.5">
+      </feOffset>
+    </filter>
+    <filter id="filter2pattern">
+      <feTurbulence baseFrequency="0.05 0.01" numOctaves="2" result="result1"/>
+      <feDisplacementMap in2="result1" scale="9" result="result2" xChannelSelector="R" yChannelSelector="G" in="SourceGraphic"/>
+      <feComposite in2="result2" in="SourceGraphic" operator="atop" result="compositeGraphic"/>
+      <feOffset in="compositeGraphic" result="fbSourceGraphic" dy="-0.9">
+      </feOffset>
+    </filter>
+  </defs>
+  <rect fill="url(#pattern)" height="100%" width="100%"/>
+</svg>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Matchcard from "../images/matchcard.png";
 import {h, styles, Button} from "./utils";
+import { Link } from "gatsby";
 
 const PreviewTitle = h(2);
 
@@ -73,7 +74,7 @@ export const ButtonContainer = styled.section`
 
 `
 
-export default ({title, thumbnail, excerpt, author, created}) => {
+export default ({title, thumbnail, excerpt, author, created, name}) => {
 
   return (
     <PreviewContainer>
@@ -87,7 +88,9 @@ export default ({title, thumbnail, excerpt, author, created}) => {
           {excerpt}
         </p>
         <ButtonContainer>
-          <Button>Read More</Button>
+          <Link to={`/posts/${name}`}>
+            <Button>Read More</Button>
+          </Link>
         </ButtonContainer>
       </PreviewContent>
     </PreviewContainer>

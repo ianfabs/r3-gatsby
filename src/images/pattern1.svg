@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%">
+  <defs>
+    <pattern id="pattern" width="50" height="50" viewBox="0 0 40,40" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+      <rect id="pattern-background" width="400%" height="400%" fill="#1f0000"/>
+      <path fill="#9e1000" d="M20 5 a 20 20 0 0 1 40 0 h10 a 10 10 0 0 1 -20 0 a 10 10 0 0 0 -20 0 a 10 10 0 0 1 -20 0 a 10 10 0 0 0 -20 0 h-10 a 20 20 0 0 1 40 0 z"/>
+      <path fill="#ff3d3d" d="M0 25 a 20 20 0 0 1 40 0 h10 a 10 10 0 0 1 -20 0 a 10 10 0 0 0 -20 0 a 10 10 0 0 1 -20 0 z"/>
+      <path fill="#9e1000" d="M20 45 a 20 20 0 0 1 40 0 h10 a 10 10 0 0 1 -20 0 a 10 10 0 0 0 -20 0 a 10 10 0 0 1 -20 0 a 10 10 0 0 0 -20 0 h-10 a 20 20 0 0 1 40 0 z"/>
+    </pattern>
+  </defs>
+  <rect fill="url(#pattern)" height="100%" width="100%"/>
+</svg>

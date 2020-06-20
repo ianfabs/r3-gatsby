@@ -7,7 +7,7 @@ import {PageHeading, PageTitle} from "../../components/utils"
 const PostsIndexPage = ({data}) => {
   let {nodes} = data.allMdx;
   
-  let posts = nodes.map(({frontmatter, excerpt, parent}) => ({...frontmatter, excerpt, created: parent.birthTime}));
+  let posts = nodes.map(({frontmatter, excerpt, parent}) => ({...frontmatter, excerpt, created: parent.birthTime, name: parent.name}));
 
   console.log(posts);
 
@@ -40,6 +40,7 @@ export const query = graphql`
       excerpt
       parent {
         ... on File {
+          name
           birthTime(formatString: "MMMM DD, YYYY")
         }
       }
