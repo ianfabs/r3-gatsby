@@ -60,20 +60,22 @@ ${({caps}) => {
 export let PageTitle = styled.h1`
   ${props => css`color: ${styles[props.color ?? "black"]};`}
   font-family: 'Roboto', sans-serif;
-  font-size: 3em;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 0;
   text-align: ${props => props.textAlign ?? "left"};
   verticle-align: center;
-  width: max-content;
-  padding: 1vmin;
+  // width: max-content;
   ${props => css`background: ${styles[props.bg ?? "transparent"]};`}
-  @media (max-width: 610px, min-width: 320px) {
+  padding: 1vmin;
+  @media (max-width: 2560px) {
+    font-size: 3em;
+  }
+  @media (max-width: 640px) {
     font-size: 2em;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 330px) {
     font-size: 1.5em;
   }
   `

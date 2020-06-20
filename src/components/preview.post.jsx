@@ -14,7 +14,9 @@ export const PreviewContainer = styled.div`
   @media (max-width: 610px) {
     flex-direction: column;
   }
+  align-items: flex-start;
   margin: 4vmin 0;
+  height: inherit;
 `;
 
 export const PreviewContent = styled.article`
@@ -58,7 +60,8 @@ export const PreviewPostMetadata = styled(Metadata)`
 `
 
 export const PreviewThumbnail = styled.img`
-  width: 25%;
+  width: 30%;
+  height: inherit;
   @media (max-width: 610px) {
     width: 100%;
   }
