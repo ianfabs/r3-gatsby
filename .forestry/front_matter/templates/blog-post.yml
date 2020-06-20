@@ -35,7 +35,7 @@ fields:
     time_format: HH:MM A ZZ
     display_utc: false
   default: now
-  hidden: true
+  hidden: false
 pages:
 - src/pages/posts/don-t-miss-our-first-episode.mdx
 - src/pages/posts/one.mdx
