@@ -51,5 +51,3 @@ fields:
     (and will eventually appear next to the content of each blog post respectively).
 pages:
 - src/pages/posts/don-t-miss-our-first-episode.mdx
-- src/pages/posts/one.mdx
-- src/pages/posts/test-post-two.mdx
