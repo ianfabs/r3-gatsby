@@ -20,9 +20,9 @@ jobs:
       with:
         # Your token at Vercel. See https://vercel.com/account/tokens
         vercelToken: 6bdnAXjF1WtshAKdThWwoT7T
-        vercelOrgId: ianfabs
+        vercelOrgId: 5foApRXa3Qotva2qqamiVrfH
         # Your Project ID at Vercel.
-        vercelProjectId: r3-gatsby
+        vercelProjectId: QmagisqyNrJGGjYZ188j66yXzicmm9vXmaegc4uDGWQDRD
         # Your token at GitHub. See https://github.com/settings/tokens
         githubToken: b928e3d041e7881113e4e3a67f1607143d06c8f4
         # If this deployment is targeted as production.
