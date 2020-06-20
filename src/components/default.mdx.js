@@ -1,5 +1,4 @@
 import React from "react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql } from "gatsby"
 import Layout from "./layout";
 import SEO from "./seo";
