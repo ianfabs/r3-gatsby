@@ -6,10 +6,13 @@ fields:
   name: title
   label: Title
   description: The <strong>Title</strong> of the post, as it will be displayed in
-    search results and on the page.
+    search results and on the page. Your title should be short, sweet, and it should
+    hook people in. No more than 6 words.
   config:
     required: true
     min: 1
+    max: 50
+  default: Post Title
 - type: text
   name: author
   label: Author
