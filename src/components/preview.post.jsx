@@ -84,12 +84,12 @@ const formatDate = (dstring) => {
   return dateObj.format("F d, Y");
 };
 
-export default ({title, thumbnail, excerpt, author, created, name, publishDate}) => {
+export default ({title, excerpt, author, created, name, publishDate, matchcard}) => {
 
   return (
     <PreviewContainer>
       <PreviewThumbnail
-        src={thumbnail ?? Matchcard}
+        src={matchcard ?? Matchcard}
       />
       <PreviewContent>
         <PreviewTitle caps spaced color="gray">{title}</PreviewTitle>
