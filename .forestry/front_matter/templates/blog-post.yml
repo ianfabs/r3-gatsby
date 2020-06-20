@@ -36,3 +36,5 @@ fields:
     display_utc: false
   default: now
   hidden: true
+pages:
+- src/pages/posts/don-t-miss-our-first-episode-with-buff-bagwell-and-corey-cooper.mdx
