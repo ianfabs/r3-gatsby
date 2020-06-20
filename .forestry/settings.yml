@@ -8,15 +8,6 @@ sections:
   path: src/pages/index.mdx
   label: Home Page
 - type: directory
-  path: src/pages
-  label: Pages
-  create: documents
-  match: "*.mdx"
-  exclude: 404.js
-  new_doc_ext: mdx
-  templates:
-  - normal-page
-- type: directory
   path: src/pages/posts
   label: Blog
   create: documents
