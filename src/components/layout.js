@@ -10,8 +10,16 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import {PageHeading, PageTitle} from "./utils"
 import Header from "./header"
+import styled from "styled-components"
 import "../fonts/fabian/fabian.css";
 import "./layout.css"
+
+const Footer = styled.footer`
+  background: hsla(0,0%,0%,0.9);
+  padding: 2vmin 8vmin;
+  font-weight: 500;
+  color: white;
+`
 
 const Layout = ({ children, pageHeading }) => {
   const data = useStaticQuery(graphql`
@@ -33,9 +41,9 @@ const Layout = ({ children, pageHeading }) => {
           margin: `0 8vmin`,
           maxWidth: 960,
         }}>{children}</main>
-        <footer>
+        <Footer>
           &copy; {new Date().getFullYear()}, R3 Media LLC. 
-        </footer>
+        </Footer>
       </div>
     </>
   )

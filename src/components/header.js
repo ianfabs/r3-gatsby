@@ -12,10 +12,12 @@ let HeaderContainer = styled.header`
   flex-direction: row;
   align-content: stretch;
   align-items: stretch;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 0 7vmin;
   min-height: 82px;
   @media (max-width: 610px) {
-    height: 9vmax;
+    min-height: 58px;
+    height: 4vmax;
   }
 `
 
@@ -26,10 +28,11 @@ let Brand = styled(Link).attrs(props => ({
   font-weight: 900;
   font-family: "Fabian", "Roboto", sans-serif;
   text-decoration: none;
-  color: ${styles["dark-1"]};
+  color: ${styles["black"]};
   line-height: 1.65em;
   @media (max-width: 610px) {
     content: 'R3';
+    font-size: 2.35em;
   }
   `
   
@@ -45,6 +48,9 @@ let Brand = styled(Link).attrs(props => ({
   // border-top: 10px solid transparent;
   & > * {
     padding: 21px 15px;
+    @media (max-width: 610px) {
+      padding: 10.5px 7.5px;
+    }
     color: ${styles["dark-2"]};
     border-top: 10px solid transparent;
     height: 100%;
@@ -74,7 +80,7 @@ const Header = ({ siteTitle }) => {
       <NavContainer>
         <Link to="/" activeClassName="active">Home</Link>
         <Link to="/posts/" activeClassName="active">Blog</Link>
-        <Link to="/videos/" activeClassName="active">Videos</Link>
+        <a href="https://www.youtube.com/channel/UC46zRme2Bk0iCdhT-3J-Sjw/videos">Videos</a>
       </NavContainer>
     </HeaderContainer>
   )

@@ -1,5 +1,6 @@
 // import React from "react";
 import styled, {css} from "styled-components";
+import DefaultPageHeaderBG from "../images/pattern1.svg"
 
 export let styles = {
   "white": "#fff",
@@ -11,6 +12,8 @@ export let styles = {
   "red-1": "#da4d4d",
   "red-2": "#a02121",
   "red-3": "#b52626",
+  "transparent": "transparent",
+  "translucent": "hsla(0,0%,0%,0.1)",
 }
 /**
  * Do not use
@@ -55,19 +58,28 @@ ${({caps}) => {
 ` */
 
 export let PageTitle = styled.h1`
-  ${props => css`color: ${styles[props.color ?? "dark-1"]};`}
+  ${props => css`color: ${styles[props.color ?? "black"]};`}
   font-family: 'Roboto', sans-serif;
-  font-size: 2.25em;
+  font-size: 3em;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 0;
   text-align: ${props => props.textAlign ?? "left"};
   verticle-align: center;
+  width: max-content;
+  padding: 1vmin;
+  ${props => css`background: ${styles[props.bg ?? "transparent"]};`}
+  @media (max-width: 610px, min-width: 320px) {
+    font-size: 2em;
+  }
+  @media (max-width: 320px) {
+    font-size: 1.5em;
+  }
   `
   
   export let PageHeading = styled.section.attrs(props => ({
-    url: props.url ?? "https://rewindrecaprelive.s3.amazonaws.com/img/texture-bw.png"
+    url: props.url ?? DefaultPageHeaderBG
   }))`
   height: ${props => props.height ?? "10vmax"};
   display: flex;
@@ -76,12 +88,12 @@ export let PageTitle = styled.h1`
   align-items: ${props => props.align ?? "left"};
   justify-content: center;
   background: url("${props => props.url}") center;
-  background-size: cover;
-  padding: 4vmin 5vmin;
-  margin-bottom: 4vmax;
-  & h1:after {
+  // ${props => css`background: ${styles[props.bg ?? "red-1"]};`}
+  padding: 4vmin 8vmin;
+  margin-bottom: 3vmax;
+  &:after {
+    color: rgb(0, 255, 255); 
     mix-blend-mode: difference;
-    color: white;
   }
 `
 
