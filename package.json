@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@google-cloud/local-auth": "^1.0.0",
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",
     "babel-plugin-styled-components": "^1.10.7",
@@ -14,17 +15,20 @@
     "gatsby-plugin-mdx": "^1.2.15",
     "gatsby-plugin-offline": "^3.2.7",
     "gatsby-plugin-react-helmet": "^3.3.2",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-styled-components": "^3.3.4",
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-sharp": "^2.5.3",
+    "googleapis": "^52.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
     "react-responsive": "^8.1.0",
     "remark-frontmatter": "^2.0.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "youtube-search": "^1.1.4"
   },
   "devDependencies": {
     "prettier": "2.0.5"
@@ -35,7 +39,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "forestry:preview": "gatsby develop -H 0.0.0.0 -p 8080",
