@@ -35,3 +35,4 @@ fields:
     time_format: HH:MM A ZZ
     display_utc: false
   default: now
+  hidden: true
