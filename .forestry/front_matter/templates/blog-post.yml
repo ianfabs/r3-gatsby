@@ -37,4 +37,5 @@ fields:
   default: now
   hidden: true
 pages:
-- src/pages/posts/don-t-miss-our-first-episode-with-buff-bagwell-and-corey-cooper.mdx
+- src/pages/posts/one.mdx
+- src/pages/posts/don-t-miss-our-first-episode.mdx
