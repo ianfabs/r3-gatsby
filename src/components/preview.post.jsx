@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Matchcard from "../images/matchcard.png";
 import {h, styles, Button} from "./utils";
 import { Link } from "gatsby";
+import "../lib/date.format";
 
 const PreviewTitle = h(2);
 
@@ -77,7 +78,13 @@ export const ButtonContainer = styled.section`
 
 `
 
-export default ({title, thumbnail, excerpt, author, created, name}) => {
+const formatDate = (dstring) => {
+  let dateObj = new Date(dstring);
+  // return `${dateObj.getMonth()} ${dateObj.getDate()}, ${dateObj.getFullYear()}`
+  return dateObj.format("F d, Y");
+};
+
+export default ({title, thumbnail, excerpt, author, created, name, publishDate}) => {
 
   return (
     <PreviewContainer>
@@ -86,7 +93,7 @@ export default ({title, thumbnail, excerpt, author, created, name}) => {
       />
       <PreviewContent>
         <PreviewTitle caps spaced color="gray">{title}</PreviewTitle>
-        <PreviewPostMetadata author={author} created={created}/>
+        <PreviewPostMetadata author={author} created={formatDate(publishDate)}/>
         <p>
           {excerpt}
         </p>

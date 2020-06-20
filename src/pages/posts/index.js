@@ -9,6 +9,10 @@ const PostsIndexPage = ({data}) => {
   
   let posts = nodes.map(({frontmatter, excerpt, parent}) => ({...frontmatter, excerpt, created: parent.birthTime, name: parent.name}));
 
+  posts = posts.sort((a,b) => new Date(b.publishDate) - new Date(a.publishDate));
+
+  console.log(posts)
+
   return (
     <Layout 
       pageHeading={
@@ -34,6 +38,8 @@ export const query = graphql`
       frontmatter {
         title
         author
+        publishDate
+        image
       }
       excerpt
       parent {
