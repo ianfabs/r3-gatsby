@@ -21,7 +21,7 @@ sections:
   label: Blog
   create: documents
   match: "*.mdx"
-  exclude: index.js
+  exclude: "*.test.mdx"
   new_doc_ext: mdx
 upload_dir: ''
 public_path: https://r3-images.s3.amazonaws.com
