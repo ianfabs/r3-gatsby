@@ -1,6 +1,5 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
-import { graphql } from "gatsby"
 import Layout from "./layout";
 import SEO from "./seo";
 import Video from "./video";
@@ -49,13 +48,3 @@ export default class MDXLayout extends React.Component {
     )
   }
 }
-
-
-/* export const query = graphql`
-query PostQuery($id: String!) {
-  mdx(id: { eq: $id }) {
-    id
-    body
-  }
-}
-` */

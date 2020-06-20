@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import {PageHeading, PageTitle} from "./utils"
+import {PageHeading} from "./utils"
 import Header from "./header"
 import styled from "styled-components"
 import "../fonts/fabian/fabian.css";

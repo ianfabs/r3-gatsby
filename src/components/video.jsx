@@ -1,5 +1,4 @@
 import React from "react";
-import {css} from "styled-components"
 
 export default ({vid, link}) => {
   return (
@@ -8,7 +7,7 @@ export default ({vid, link}) => {
       frameborder="0" 
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen
-      title=""
+      title="Unique"
       style={{width: "100%", height: "30vmax"}}
     >
     </iframe>

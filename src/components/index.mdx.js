@@ -1,10 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import Layout from "../components/layout"
 import Video from "../components/video"
 import SEO from "../components/seo"
-import { PageHeading, PageTitle } from "../components/utils"
+import { PageHeading } from "../components/utils"
 
 let shortcodes = { Video, SEO }
 
