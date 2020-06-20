@@ -11,3 +11,5 @@ fields:
     required: true
     min: 1
   default: New Page
+pages:
+- src/pages/help.mdx
