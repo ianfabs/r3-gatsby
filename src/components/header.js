@@ -29,10 +29,18 @@ let Brand = styled(Link).attrs(props => ({
   font-family: "Fabian", "Roboto", sans-serif;
   text-decoration: none;
   color: ${styles["black"]};
-  line-height: 1.65em;
+  line-height: 1.5em;
   @media (max-width: 610px) {
     content: 'R3';
-    font-size: 2.35em;
+    font-size: 2.45em;
+  }
+  @media (max-height: 412px) {
+    font-size: 2em;
+    padding-top: 4vh;
+  }
+  @media (min-width: 866px) {
+    font-size: 3em;
+    padding-top: 0.5vh;
   }
   `
   
