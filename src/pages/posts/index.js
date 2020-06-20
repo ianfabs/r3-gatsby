@@ -9,13 +9,11 @@ const PostsIndexPage = ({data}) => {
   
   let posts = nodes.map(({frontmatter, excerpt, parent}) => ({...frontmatter, excerpt, created: parent.birthTime, name: parent.name}));
 
-  console.log(posts);
-
   return (
     <Layout 
       pageHeading={
         <PageHeading>
-          <PageTitle>
+          <PageTitle color="white">
             Blog Posts
           </PageTitle>
         </PageHeading>

@@ -79,7 +79,7 @@ export let PageTitle = styled.h1`
   `
   
   export let PageHeading = styled.section.attrs(props => ({
-    url: props.url ?? DefaultPageHeaderBG
+    url: DefaultPageHeaderBG
   }))`
   height: ${props => props.height ?? "10vmax"};
   display: flex;
