@@ -37,5 +37,6 @@ fields:
   default: now
   hidden: true
 pages:
-- src/pages/posts/one.mdx
 - src/pages/posts/don-t-miss-our-first-episode.mdx
+- src/pages/posts/one.mdx
+- src/pages/posts/test-post-two.mdx
