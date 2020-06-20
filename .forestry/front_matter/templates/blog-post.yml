@@ -6,10 +6,13 @@ fields:
   name: title
   label: Title
   description: The <strong>Title</strong> of the post, as it will be displayed in
-    search results and on the page.
+    search results and on the page. Your title should be short, sweet, and it should
+    hook people in. No more than 6 words.
   config:
     required: true
     min: 1
+    max: 50
+  default: Post Title
 - type: text
   name: author
   label: Author
@@ -17,25 +20,35 @@ fields:
     the post
   config:
     min: 1
-- name: image
-  type: text
-  config:
-    required: false
-  label: Image
-  description: The cover image for the page
 - name: publishDate
   type: datetime
   label: Publish Date
-  description: The <strong>Publish Date</strong> will prevent any posts with this
-    field set to a date in the future from appearing in the list of available blog
-    posts.
+  description: The <strong>Publish Date</strong> represents the date when a post will
+    become visible on the website. If you set the date to a date in the future, the
+    post will not appear until then. If you leave it as the current date and time,
+    it will appear immediately.
   config:
-    required: false
+    required: true
     date_format: MMMM DD, YYYY
     time_format: HH:MM A ZZ
     display_utc: false
   default: now
   hidden: false
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Cover Image
+  description: The cover image is the image that sits behind the title of your post.
+    It is <strong>not</strong> the matchcard. The matchcard will be show as the posts
+    preview, and next to the content of each article(eventually).
+- name: matchcard
+  type: file
+  config:
+    maxSize: 64
+  label: Matchcard
+  description: The <em>matchcard</em> is the card that appears next to the post-preview
+    (and will eventually appear next to the content of each blog post respectively).
 pages:
 - src/pages/posts/don-t-miss-our-first-episode.mdx
 - src/pages/posts/one.mdx
