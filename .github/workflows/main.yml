@@ -21,7 +21,7 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    
+
     - name: Vercel Deployment
       uses: xmflsct/action-vercel-deployment@v0.5.3
       with:
@@ -31,4 +31,4 @@ jobs:
         # Your Project ID at Vercel.
         vercelProjectId: QmagisqyNrJGGjYZ188j66yXzicmm9vXmaegc4uDGWQDRD
         # Your token at GitHub. See https://github.com/settings/tokens
-        githubToken: b928e3d041e7881113e4e3a67f1607143d06c8f4
+        githubToken: 173cf7c7d3c390966c35dcfd1c2600d5eda70791
