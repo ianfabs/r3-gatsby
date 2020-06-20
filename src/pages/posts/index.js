@@ -11,6 +11,8 @@ const PostsIndexPage = ({data}) => {
 
   posts = posts.sort((a,b) => new Date(b.publishDate) - new Date(a.publishDate));
 
+  posts = posts.filter( p => new Date(p.publishDate) <= Date.now() )
+
   console.log(posts)
 
   return (
@@ -40,6 +42,7 @@ export const query = graphql`
         author
         publishDate
         image
+        matchcard
       }
       excerpt
       parent {
