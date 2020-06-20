@@ -1,6 +1,6 @@
 // import React from "react";
 import styled, {css} from "styled-components";
-import DefaultPageHeaderBG from "../images/pattern1.svg"
+import DefaultPageHeaderBG from "../images/pattern2.jpeg"
 
 export let styles = {
   "white": "#fff",
@@ -79,7 +79,7 @@ export let PageTitle = styled.h1`
   `
   
   export let PageHeading = styled.section.attrs(props => ({
-    url: DefaultPageHeaderBG
+    url: props.url ?? String(DefaultPageHeaderBG.toString())
   }))`
   height: ${props => props.height ?? "10vmax"};
   display: flex;
@@ -87,8 +87,7 @@ export let PageTitle = styled.h1`
   align-content: ${props => props.align ?? "left"};
   align-items: ${props => props.align ?? "left"};
   justify-content: center;
-  ${props => css`background: url("${DefaultPageHeaderBG}") center;`}
-  // background: url("${props => props.url}") center;
+  background: url("${props => props.url}") center;
   // ${props => css`background: ${styles[props.bg ?? "red-1"]};`}
   padding: 4vmin 8vmin;
   margin-bottom: 3vmax;
