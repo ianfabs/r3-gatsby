@@ -51,3 +51,4 @@ fields:
     (and will eventually appear next to the content of each blog post respectively).
 pages:
 - src/pages/posts/don-t-miss-our-first-episode.mdx
+- src/pages/posts/insance-dwane-pounds-peters.mdx
