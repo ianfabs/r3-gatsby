@@ -17,6 +17,12 @@ fields:
     the post
   config:
     min: 1
+- name: image
+  type: text
+  config:
+    required: false
+  label: Image
+  description: The cover image for the page
 - name: publishDate
   type: datetime
   label: Publish Date
@@ -29,9 +35,3 @@ fields:
     time_format: HH:MM A ZZ
     display_utc: false
   default: now
-- name: image
-  type: text
-  config:
-    required: false
-  label: Image
-  description: The cover image for the page
