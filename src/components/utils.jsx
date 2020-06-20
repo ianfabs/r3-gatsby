@@ -87,7 +87,8 @@ export let PageTitle = styled.h1`
   align-content: ${props => props.align ?? "left"};
   align-items: ${props => props.align ?? "left"};
   justify-content: center;
-  background: url("${props => props.url}") center;
+  ${props => css`background: url("${props.url}") center;`}
+  // background: url("${props => props.url}") center;
   // ${props => css`background: ${styles[props.bg ?? "red-1"]};`}
   padding: 4vmin 8vmin;
   margin-bottom: 3vmax;
